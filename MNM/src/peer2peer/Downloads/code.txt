@@ -1,0 +1,25 @@
+//my files button
+        File shared = new File("D:/Peer2Peer/src/peer2peer/Downloads");
+        System.out.println("file opened");
+        ArrayList<String> names = new ArrayList<String>(Arrays.asList(shared.list()));
+        System.out.println("Processed as list");
+       /* try {
+            names = mnc.getList();
+            System.out.println("Got the list of names");
+        } catch (IOException ex) {
+            Logger.getLogger(NewApplication.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(NewApplication.class.getName()).log(Level.SEVERE, null, ex);
+        }*/
+                mine.setText("Available file"+"\n");
+                for(int i=0;i<names.size();i++){
+                    System.out.println(names.get(i));
+                    mine.append(names.get(i)+"\n");
+                }
+        total.setVisible(true);// TODO add your handling code here:
+        search.setVisible(true);
+        myfiles.setVisible(true);
+        home.setVisible(false);
+        client.setVisible(false);
+        share.setVisible(false);
+        chat.setVisible(false);
